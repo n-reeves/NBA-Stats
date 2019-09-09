@@ -1,0 +1,136 @@
+table{
+    border-collapse: collapse;
+    font-family: Helvetica;
+}
+
+table th{
+    height: 8px;
+    background-color: darkcyan;
+    color: #FFF;
+    padding: 4px 30px 4px 8px;
+}
+table td{
+    border: 1px solid #e3e3e3;
+    padding: 4px 8px;
+}
+table tr:nth-child(odd) td{
+    background-color: #e7edf0;
+}
+#Search {
+    text-align: left;
+    font-family: Helvetica;
+}
+
+form {
+    text-align: center;
+    font-family: Helvetica;
+    
+}
+#Name{
+    font-size: 60px;
+}
+#Player{
+    font-weight: bold;
+}
+#Player th{
+    height: 25px;
+    font-size: 20px;
+    background-color: purple;
+    
+}
+
+#Player td{
+    font-size: 16px;
+    background-color: #e7edf0;
+}
+
+
+
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding:0px;
+    overflow: hidden;
+    background-color: navy;
+}
+
+li input{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+} 
+li input:hover{
+    background-color: white;
+    color:black;
+}
+body{
+	margin: 0;
+}
+
+nav{
+    min-height: 88px;
+    background-color: navy;
+	text-align: center;
+    width: 100%;
+}
+
+#bbal{
+	
+    display: block;
+	position:absolute;
+	left: 44%;
+	top: .5%;
+    
+}
+#singlesearch #playerField{
+    position: absolute;
+    left:.7%;
+    top: 5%;
+    padding: 5px 2px 5px 2px;
+    font-size: 16px;
+}
+
+#firstdouble #playerField1{
+    position: absolute;
+    left: 56%;
+    top:5%;
+    padding: 5px 0px 5px 0px;
+    font-size: 16px;
+}
+#seconddouble #playerField2{
+    position: absolute;
+    left:72%;
+    top: 5%;
+    padding: 5px 0px 5px 0px;
+    font-size: 16px;
+    
+}
+#doublebutton #double{
+    position: absolute;
+    left:88%;
+    top: 5%;
+    padding: 5px 0px 5px 0px;
+    font-size: 16px;
+}
+
+#singlebutton #single{
+    position: absolute;
+    left:17%;
+    top: 5%;
+    padding: 5px 2px 5px 2px;
+    font-size: 16px;
+}   
+#info{
+    position: absolute;
+    color: white;
+    left: 31%;
+    top: 2%;
+   
+    
+}
+
+
+ 

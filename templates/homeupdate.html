@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <script type="text/javascript" src="{{ url_for('static', filename='home.js') }}"></script>
+        <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+        
+        <title>NBA Stats For You</title>
+    </head>
+    <body>
+        
+        <h1 id = "title">
+            <a href="">
+            <img src="{{ url_for('static', filename='logo.jpg') }}", alt="Logo">
+            </a>
+            </h1>
+        <link href="home.css" rel = "stylesheet">
+        <h2 id = "SingleSearch"> 
+            Single Player Search
+            <div>
+<<<<<<< HEAD
+                <input type="text" onkeyup = "onChangeSearch()" id = "playerField" placeholder="">
+                <button onclick="searchSinglePlayer()">Search for a Player!</button><br>
+=======
+                <input type="text" onkeyup = "onChangeSearch()" id = "playerField" placeholder="Enter a Player"><br>
+>>>>>>> bfbbfb57faeb590fbe4c4415a737b69cd92c70a9
+                <ul id="searchUL">
+                <li> word </li>
+  			</ul>
+				<br>
+            </div>
+        </h2>
+        <h2 id = "DoubleSearch">
+            Two Player Comparison Search
+            <br>
+<<<<<<< HEAD
+            <input type="text" onkeyup = "onChangeSearchTwoPlayer1()" id = "playerField1" name="First Player" value="">
+			<input type="text" onkeyup = "onChangeSearchTwoPlayer2()" id ="playerField2" name="Second Player" value="">
+			<button onclick="searchTwoPlayer()">Search for a Player!</button>
+			<br>
+=======
+            <input type="text" onkeyup = "onChangeSearchTwoPlayer1()" id = "playerField1" placeholder="Enter First Player">
+>>>>>>> bfbbfb57faeb590fbe4c4415a737b69cd92c70a9
+			<ul id="searchUL1">
+      <li> word </li>
+			</ul>
+<<<<<<< HEAD
+=======
+            <input type="text" onkeyup = "onChangeSearchTwoPlayer2()" id ="playerField2" placeholderr="Enter Second Player" value="">
+>>>>>>> bfbbfb57faeb590fbe4c4415a737b69cd92c70a9
+			<ul id="searchUL2">
+      <li> word </li>
+			</ul><br>
+        </h2>
+    </body>
+</html>

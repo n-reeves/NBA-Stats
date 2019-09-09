@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='README.css') }}">
+	<script type="text/javascript" src="{{ url_for('static', filename='noplayer.js') }}"></script>
+     <link href="noplayer.css" rel = "stylesheet"> 
+        
+    </head>
+    <body>
+        
+        <nav id = 'Navbar'>
+            <div id = 'singlesearch'>
+                <input type="text" id = "playerField" placeholder="Enter another Player">
+            </div>
+            <div id = 'singlebutton'>
+                <button onclick="searchSinglePlayer()" id = 'single'>Search for a Player</button>
+            </div>
+            <div id = "bbal">
+                    <a href="/">
+                    <img src="{{ url_for('static', filename='resize.jpg') }}", alt="Logo">
+
+                    </a>
+            </div>
+            <div>
+                <a href = "/ReadMe" id = info>
+                <h2>
+                    Information
+                </h2>
+                </a>
+            </div>
+            <div id = 'firstdouble'>
+                <input type="text" id = "playerField1" placeholder="First Player" align = 'right'>
+            </div>
+                <div id = 'seconddouble'>
+                <input type="text" id ="playerField2" placeholder="Second Player" align = 'right'>
+            </div>
+            <div id = "doublebutton">
+            <button onclick= "searchTwoPlayer()" id = 'double'>Comparison Search</button>
+                `</div>
+        </nav>
+        <h1>
+			 Current State of NBA Stats For you:</h1>
+			<p>The Project uses a dataset that includes statistical averages for every NBA player from the 1984-1985 season until the 2016-2017 season. The main function of the website is to be able to search for any NBA player who played between 1984-1985 and then display their statistics. Furthermore, if the user wants to be able to compare two players directly, they can do so by using the Two Player Search, which will display both player’s statistics side by side.</p>
+		<h1>Citations for Data set and loading data into database</h1>
+        <p> Our data is a subset of a data se that we recieved from https://www.kaggle.com/drgilermo/nba-players-stats, a website for sharing open datasets, with licensing information found here: https://www.kaggle.com/terms. The data ranged from 1950 to 2018, but for the purpose of our project, we decided to only look at data from the 1984-1985 season. This subset was constructed using the R script located in our Repository. </p>
+			
+			<h1>Description of features:</h1>
+			<p>The main two features of the website are searching for an individual player’s stats and searching for a pair of players whose stats to compare. Both search features have slightly different drop-down menus implemented using Javascript. When the user is typing in their query for an individual search, a drop-down menu will appear that lists the first three players sorted alphabetically that match their unfinished query. Clicking on a player will bring the user to that player’s stats page. </p> <p>Once there, the user will be able to either navigate back to the home page of the website by clicking the logo or enter another search query using the navigation bar. Unfortunately, we were not able to implement the drop down-menus for the navigation bar without damaging the look and feel of the website. </p> <p>When the user is typing in their query for a comparison search, there will again be a drop-down menu that lists the first three players sorted alphabetically that match their unfinished query. However, in this drop-down menu clicking on a player fills their name into the current search bar, which allows the user to use the drop-down menu for both players without annoyingly sending them to an individual player’s stats page.</p> <p>Finally, if the user either has an empty input or an input that doesn’t match any NBA player when they submit their query, they will be taken to page informing them of their “bad” query and how to return to the homepage.</p>
+        <h1>One More Feature</h1>
+            One feature we wish we could've implemented if we had more time was to have a team search. The idea would be to search for a team and then depending on a user selected stat display the top 5 or 10 players who had the highest averages of that selected stat. For example, If I searched the Cleveland Cavaliers and selected points, I would likely see several of Lebron's high scoring seasons as well as some of Kyrie Irving's.
+
+    </body>
+</html>

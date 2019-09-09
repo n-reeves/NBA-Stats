@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <script type="text/javascript" src="{{ url_for('static', filename='home.js') }}"></script>
+        <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+        
+        <title>NBA Stats For You</title>
+    </head>
+    <body>
+        
+        <h1 id = "title">
+            <a href="">
+            <img src="{{ url_for('static', filename='logo.jpg') }}", alt="Logo">
+            </a>
+            </h1>
+        <link href="home.css" rel = "stylesheet">
+        <h2 id = "SingleSearch"> 
+            Single Player Search
+            <div>
+
+                <input type="text" onkeyup = "onChangeSearch()" id = "playerField" placeholder="Enter Name">
+                <button onclick="searchSinglePlayer()">Search for a Player!</button><br>
+                <div id="singleResults">
+					<ul id="searchUL">
+					</ul>
+				</div><br>
+            </div>
+        </h2>
+        <h2 id = "DoubleSearch">
+            Two Player Comparison Search
+            <br>
+            <input type="text" onkeyup = "onChangeSearchTwoPlayer1()" id = "playerField1" name="First Player" placeholder="Enter Name">
+			<input type="text" onkeyup = "onChangeSearchTwoPlayer2()" id ="playerField2" name="Second Player" placeholder="Enter Name">
+			<button onclick="searchTwoPlayer()">Search for a Player!</button>
+			<br>
+			<div id="dropDowns">
+				<div id ="twoPlayerResults1">
+					<ul id="searchUL1">
+					</ul>
+				</div>
+				<div id="twoPlayerResults2">
+					<ul id="searchUL2">
+					</ul>
+				</div>
+			</div><br>
+        </h2>
+        <a href = "/ReadMe" id = info align = center>
+                <h2>
+                    README
+                </h2>
+                </a>
+    </body>
+</html>

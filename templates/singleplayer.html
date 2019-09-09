@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="{{ url_for('static', filename='singleplayer.css') }}">
+        <script type="text/javascript" src="{{ url_for('static', filename='singleplayer.js') }}"></script>
+
+        
+    </head>
+    <body>
+        
+        <nav id = 'Navbar'>
+            <div id = 'singlesearch'>
+                <input type="text" id = "playerField" placeholder="Enter another Player">
+            </div>
+            <div id = 'singlebutton'>
+                <button onclick="searchSinglePlayer()" id = 'single'>Search for a Player</button>
+            </div>
+            <div id = "bbal">
+                    <a href="/">
+                    <img src="{{ url_for('static', filename='resize.jpg') }}", alt="Logo">
+
+                    </a>
+            </div>
+            <div id = "info">
+                <a href = "/ReadMe" id = info>
+                <h2>
+                    Information
+                </h2>
+                </a>
+            </div>
+            <div id = 'firstdouble'>
+                <input type="text" id = "playerField1" placeholder="First Player" align = 'right'>
+            </div>
+                <div id = 'seconddouble'>
+                <input type="text" id ="playerField2" placeholder="Second Player" align = 'right'>
+            </div>
+            <div id = "doublebutton">
+            <button onclick= "searchTwoPlayer()" id = 'double'>Comparison Search</button>
+                `</div>
+        </nav>
+       <br>
+            <title>NBA Stats For You</title>
+        <link href="singleplayer.css" rel = "stylesheet"> 
+        <h1 id = 'Name' align = center>{{player_info.player_name}}</h1>
+        <table align = center id = "Player">
+            <tr><th>Position</th><th>Height</th><th>Weight</th><th>Rookie Season</th><th>Last Season</th><th>College</th></tr>
+            
+            <tr><td>{{stats[-1].position}}</td><td>{{player_info.height}}</td><td>{{player_info.weight}}</td><td>{{player_info.start_season}}</td><td>{{player_info.end_season}}</td><td>{{player_info.college}}</td></tr>
+        </table> <br>
+        
+        <table align = center>
+            <tr><th>Year</th><th>Age</th><th>Team</th><th>Games</th><th>Minutes Played</th><th>Points</th> <th>Assists</th><th>Rebounds</th> <th>Blocks</th> <th>Steals</th> <th>Turnovers</th><th>FG %</th><th>3PT %</th></tr>
+            {% for stat in stats%}
+            <tr><td>{{stat.season}}</td><td>{{stat.age}}</td><td>{{stat.team}}</td><td>{{ stat.games_played }}</td><td>{{stat.minutes_played}}</td><td>{{ stat.pts }}</td> <td>{{ stat.assists }}</td><td>{{ stat.rebounds}}</td> <td>{{ stat.blocks }}</td><td>{{ stat.steals }}</td><td>{{stat.turnovers}}</td><td>{{ stat.field_goal_pct }}</td><td>{{stat.three_pt_pct}}</td></tr>
+            {% endfor %}
+        </table>
+       
+        
+    </body>
+</html>

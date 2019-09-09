@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='noplayer.css') }}">
+	<script type="text/javascript" src="{{ url_for('static', filename='noplayer.js') }}"></script>
+    <link href="noplayer.css" rel = "stylesheet"> 
+    </head>
+    <body>
+        
+        <nav id = 'Navbar'>
+            <div id = 'singlesearch'>
+                <input type="text" id = "playerField" placeholder="Enter another Player">
+            </div>
+            <div id = 'singlebutton'>
+                <button onclick="searchSinglePlayer()" id = 'single'>Search for a Player</button>
+            </div>
+            <div id = "bbal">
+                    <a href="/">
+                    <img src="{{ url_for('static', filename='resize.jpg') }}", alt="Logo">
+
+                    </a>
+            </div>
+            <div>
+                <a href = "/ReadMe" id = info>
+                <h2>
+                    Information
+                </h2>
+                </a>
+            </div>
+            <div id = 'firstdouble'>
+                <input type="text" id = "playerField1" placeholder="First Player" align = 'right'>
+            </div>
+                <div id = 'seconddouble'>
+                <input type="text" id ="playerField2" placeholder="Second Player" align = 'right'>
+            </div>
+            <div id = "doublebutton">
+            <button onclick= "searchTwoPlayer()" id = 'double'>Comparison Search</button>
+                `</div>
+        </nav>
+        <h2 id = "mistake" align = 'center'>One or more of your search queries did not match any NBA player. Please make sure that search field(s) are filled. </h2> 
+        <h2 align='center'>Either re-enter search query in the navigation bar or press the logo to return to the homepage.
+        </h2>
+    </body>
+</html>

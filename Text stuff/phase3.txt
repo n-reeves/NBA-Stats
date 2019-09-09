@@ -1,0 +1,10 @@
+Paul Reich
+Nick Reeves
+
+players.csv contains base NBA player data from 1985 to 2018 including, name, career start year, career end year(2018 if still active),
+height, weight, univeristy, and position
+
+season_stats,csv contains season statistics of each NBA player from 1985 to 2018 including,
+points, team, assists, offensive rebounds, defensive rebounds, steals, blocks, free throw percentage, 3 point percentage, field goal percentage, minutes played, games played, personal fouls, and age. 
+
+api-tests contains our various unit test which while not high in number test the various types of edge cases in our queries. 
